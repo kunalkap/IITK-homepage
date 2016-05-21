@@ -11,6 +11,28 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script>
+$(window).load(function(){
+    x=$("#vid2").css("width");
+    x=parseInt(x);
+    x=x*9/16;
+    x=parseInt(x);
+    x=x+"px";
+    $("#vid1").css("height", x)
+    $("#vid2").css("height", x)
+    //console.log(x);
+});
+$(window).resize(function(){
+    x=$("#vid2").css("width");
+    x=parseInt(x);
+    x=x*9/16;
+    x=parseInt(x);
+    x=x+"px";
+    $("#vid1").css("height", x)
+    $("#vid2").css("height", x)
+    //console.log(x);
+});
+</script>
 </head>
 
 <body>
@@ -53,22 +75,12 @@
     </p><p>
     The following two videos should get you familiar with what to expect with Cimulator (watch in HD):
     </p>
-    <iframe width="560" height="345"
+    <iframe id="vid1" style="margin-left:12.5%;width:75%;"
                         src="http://www.youtube.com/embed/bx9V0sw_n-M">
-</iframe>
-<iframe width="560" height="345"
+    </iframe>
+    <iframe id="vid2" style="margin-left:12.5%;width:75%;"
                     src="http://www.youtube.com/embed/t0nSdXk-8Zw">
-</iframe>
-<!--<div class="col-md-7 col-md-push-3 embed-responsive embed-responsive-16by9">-->
-<!--<iframe src="https://www.youtube.com/embed/bx9V0sw_n-M" allowfullscreen="" frameborder="0"></iframe>-->
-<!--</div>-->
-<!--<p>-->
-<!--<br />-->
-<!--<br />-->
-<!--<div class="col-md-7 col-md-push-3 embed-responsive embed-responsive-16by9">-->
-<!--<iframe src="https://www.youtube.com/embed/t0nSdXk-8Zw" allowfullscreen="" frameborder="0" height="200" width="560"></iframe>-->
-<!--</div>-->
-
+    </iframe>
 </div>
 </body>
 </html>
