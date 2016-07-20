@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Kunal Kapila">
-<title>
-    Cimulator
-</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Kunal Kapila">
+        <title>
+            Cimulator
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
 $(window).load(function(){
     x=$("#vid2").css("width");
     x=parseInt(x);
@@ -19,8 +19,8 @@ $(window).load(function(){
     x=parseInt(x);
     x=x+"px";
     $("#vid1").css("height", x)
-    $("#vid2").css("height", x)
-    //console.log(x);
+        $("#vid2").css("height", x)
+        //console.log(x);
 });
 $(window).resize(function(){
     x=$("#vid2").css("width");
@@ -29,58 +29,85 @@ $(window).resize(function(){
     x=parseInt(x);
     x=x+"px";
     $("#vid1").css("height", x)
-    $("#vid2").css("height", x)
-    //console.log(x);
+        $("#vid2").css("height", x)
+        //console.log(x);
 });
-</script>
-</head>
+        </script>
+    </head>
 
-<body>
-<nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Kunal Kapila</a>
+    <body>
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Kunal Kapila</a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./edu.html">Education</a></li>
+                        <li><a href="./CV_Kunal.pdf">CV</a></li>
+                        <li><a href="./contact.html">Contact Me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <p>
+                    Cimulator is a tool that can help you see you program in action.
+                    That means no more mysterious floating point exceptions, no more hidden runtime errors.
+                    With Cimulator, you can actually see your program run step by step and debug the errors as they occur.
+                    </p>
+                    <p>
+                    You can change the speed of the Simulation using the slider on the top left hand side,
+                    or even pause the simulation altogether using the Pause button on the top right of the screen.
+                    The reset button, just next to the Pause button can be used to stop a running simulation,
+                    and reset everything. When the reset button is pressed,
+                    the gcc output of the program is displayed in the output space.
+                    </p><p>
+                    Once you are done with the coding part, enter the input in the input box.
+                    The input box is a text area where the user can enter input for the program in the ace editor,
+                    and as the input is read by the program, it gets highlighted in the box.
+                    Once you start a simulation, the input box becomes non-editable.
+                    </p><p>
+                    To start the simulation, press the submit button, which is below the input and output box,
+                    upon completion of the coding part and the input part. The following scenarios could occur:
+                    <ul>
+                        <li>If gcc was unable to compile your program, it would display the gcc compile error
+                        <li>If the output of gcc and output interpreter was the same,
+                                “Simulation made successfully” is displayed, and simulation starts
+                        <li>If the gcc output did not match because of runtime in the program
+                    </ul>
+                    The output box is a textbox where the output of the program gets displayed.
+                    The output gets added to the box as an when a printf statement is encountered, not altogether.
+                    Every time something new gets printed, the output box flashes green.
+                    </p><p>
+                    When the program is running, the corresponding line of the code is highlighted
+                    to provide a indication of where the simulation is, currently.
+                    When the code highlighting hits a conditional (if statement),
+                    its colour changes to green or red depending on whether the condition is evaluated to true or false (resp.).
+                    </p><p>
+                    If an error is encountered during the execution of the program,
+                    a popup will denote the error and the line in which the error was encountered
+                    will be highlighted in the editor in the background.
+                    </p><p>In case you encounter any bugs in Cimulator,
+                    please report them using the Bug Report button on the bottom right.
+                    </p><p>
+                    The following two videos should get you familiar with what to expect with Cimulator (watch in HD):
+                    </p>
+                </div>
+            </div>
+            <div class="row" style="margin-bottom:30px;">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <iframe id="vid1" style="width:100%;" src="http://www.youtube.com/embed/bx9V0sw_n-M" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <iframe id="vid2" style="width:100%;" src="http://www.youtube.com/embed/t0nSdXk-8Zw" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
         </div>
-        <div>
-            <ul class="nav navbar-nav">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./edu.html">Education</a></li>
-                <li><a href="./CV_Kunal.pdf">CV</a></li>
-                <li><a href="./contact.html">Contact Me</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<div class="container">
-<p>
-    Cimulator is a tool that can help you see you program in action. That means no more mysterious floating point exceptions, no more hidden runtime errors. With Cimulator, you can actually see your program run step by step and debug the errors as they occur.
-    </p>
-<p>
-    You can change the speed of the Simulation using the slider on the top left hand side, or even pause the simulation altogether using the Pause button on the top right of the screen. The reset button, just next to the Pause button can be used to stop a running simulation, and reset everything. When the reset button is pressed, the gcc output of the program is displayed in the output space.
-    </p><p>
-    Once you are done with the coding part, enter the input in the input box. The input box is a text area where the user can enter input for the program in the ace editor, and as the input is read by the program, it gets highlighted in the box. Once you start a simulation, the input box becomes non-editable.
-    </p><p>
-    To start the simulation, press the submit button, which is below the input and output box, upon completion of the coding part and the input part. The following scenarios could occur:
-    <ul>
-    <li>If gcc was unable to compile your program, it would display the gcc compile error
-    <li>If the output of gcc and output interpreter was the same, “Simulation made successfully” is displayed, and simulation starts
-    <li>If the gcc output did not match because of runtime in the program
-    </ul>
-    The output box is a textbox where the output of the program gets displayed. The output gets added to the box as an when a printf statement is encountered, not altogether. Every time something new gets printed, the output box flashes green.
-    </p><p>
-    When the program is running, the corresponding line of the code is highlighted to provide a indication of where the simulation is, currently. When the code highlighting hits a conditional (if statement), its colour changes to green or red depending on whether the condition is evaluated to true or false (resp.).
-    </p><p>
-    If an error is encountered during the execution of the program, a popup will denote the error and the line in which the error was encountered will be highlighted in the editor in the background.
-    </p><p>In case you encounter any bugs in Cimulator, please report them using the Bug Report button on the bottom right.
-    </p><p>
-    The following two videos should get you familiar with what to expect with Cimulator (watch in HD):
-    </p>
-    <iframe id="vid1" style="margin-left:12.5%;width:75%;"
-                        src="http://www.youtube.com/embed/bx9V0sw_n-M">
-    </iframe>
-    <iframe id="vid2" style="margin-left:12.5%;width:75%;"
-                    src="http://www.youtube.com/embed/t0nSdXk-8Zw">
-    </iframe>
-</div>
-</body>
+    </body>
 </html>
